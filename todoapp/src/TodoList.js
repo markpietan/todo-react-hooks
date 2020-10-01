@@ -1,10 +1,10 @@
 import React from "react";
 import Todo from "./Todo"
-const TodoList = ({ todos }) => {
+const TodoList = ({ todos, setTodos, toggleTodoCompleted, deleteTodo}) => {
   return (
     <section>
       {todos.map(function (e, index) {
-        return <Todo key={index} name = {e.name}></Todo>;
+        return <Todo deleteTodo= {deleteTodo} toggleTodoCompleted= {toggleTodoCompleted} key={index} name = {e.name} priority= {e.priority} completed= {e.completed}></Todo>;
       })}
     </section>
   );

@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const InputBar = ({ addTodo }) => {
   const [text, setText] = useState("");
   function onUserType(e) {
-    e.preventDefault();
     setText(e.target.value);
   }
 
